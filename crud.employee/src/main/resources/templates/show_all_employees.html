@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+	<h2>Employee info:</h2>
+	<table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Team</th>
+            <th>Salary</th>
+        </tr>
+        <!-- For Thymeleaf -->
+        <tr th:each="emp : ${empList}">
+            <td th:text="${emp.id}"></td>
+            <td th:text="${emp.name}"></td>
+            <td th:text="${emp.team}"></td>
+            <td th:text="${emp.salary}"></td>
+        </tr>
+        </table>
+</body>
+</html>
